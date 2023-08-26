@@ -3,7 +3,8 @@
 {% load static %}
 <link rel="icon" href="{% static '/images/favicon.ico' %}">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
 
 
@@ -13,7 +14,7 @@
 <body>
 
 {% if user.is_superuser%}
-<a href="{% url 'logout' %}" class="save btn btn-secondary">Вийти</a>
+<a href="{% url 'logout' %}" class="save btn btn-secondary log">Вийти</a>
 <br>
 {% for a in page_obj %}
 <div class="container message">
@@ -31,7 +32,7 @@
 <br>
 <h2>Нове повідомлення</h2>
     <form action ="{%url 'leave_message' %}" method="POST" class="post-form">{% csrf_token %}
-        <textarea  required placeholder="Text", name="text", cols="100" rows="10"></textarea><br>
+        <textarea  required placeholder="Text", name="text"></textarea><br>
         <button type="submit" class="save btn btn-secondary">Відправити</button>
     </form>
 
@@ -56,7 +57,7 @@
 {%else%}
 
 
-<a href="{%url 'login' %}" class="save btn btn-secondary">Увійти</a>
+ <a href="{%url 'login' %}" class="save btn btn-secondary log">Увійти</a>
 {%endif%}
 
 {% if pages > 1 %}
