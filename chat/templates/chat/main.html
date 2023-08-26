@@ -27,7 +27,7 @@
     {%if a.photo %}
 <img src="{{ a.photo.url }}", class="rounded" width="100%", height="70%"" >
     {%endif%}
-   <h2> {{ a.text }} </h2>
+   <h2> {{ a.text|linebreaksbr }} </h2>
 
     <h6>Дата:  {{a.created_date}}</h6>
 
