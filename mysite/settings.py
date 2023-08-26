@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-i19z(q=0@_lqr%wii@vi@$gq#e)xm*$&(3q8#3@eos7twtv%o@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "chatnew.pythonanywhere.com/"]
+ALLOWED_HOSTS = ["127.0.0.1", ".pythonanywhere.com"]
 
 LOGOUT_REDIRECT_URL = "main"
 
