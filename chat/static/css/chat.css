@@ -1,0 +1,11 @@
+h2 {
+  color: green;
+}
+body {
+    padding-left:5%;
+    background-color: lightgrey;
+}
+.message {
+    border: 2px dotted;
+    margin: 10px auto 10px auto;
+}
