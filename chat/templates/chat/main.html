@@ -16,8 +16,10 @@
 {% if user.is_superuser%}
 <a href="{% url 'logout' %}" class="save btn btn-secondary log">Вийти</a>
 <br>
+<br>
+
 {% for a in page_obj %}
-<div class="container message">
+<div class="container center">
      <strong>Автор:  {{a.author}}</strong>
    <h2> {{ a.text }} </h2>
 
@@ -30,12 +32,13 @@
 
 
 <br>
+<div class="container center">
 <h2>Нове повідомлення</h2>
     <form action ="{%url 'leave_message' %}" method="POST" class="post-form">{% csrf_token %}
         <textarea  required placeholder="Text", name="text"></textarea><br>
         <button type="submit" class="save btn btn-secondary">Відправити</button>
     </form>
-
+<br>
 <div class="pagination">
     <span class="step-links">
         {% if page_obj.has_previous %}
@@ -52,6 +55,7 @@
             <a href="?page={{ page_obj.paginator.num_pages }}" class="save btn btn-secondary">Остання &raquo;</a>
         {% endif %}
     </span>
+</div>
 </div>
 <br>
 {%else%}
