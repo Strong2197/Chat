@@ -43,7 +43,7 @@
 <h2>Нове повідомлення</h2>
     <form action ="{%url 'leave_message' %}" method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
         <textarea  placeholder="Text", name="text"></textarea><br>
-        <input type="file", name="images">
+        <input type="file", name="images", accept="image/*", id="images">
         <button type="submit" class="save btn btn-secondary">Відправити</button>
     </form>
 <br>
