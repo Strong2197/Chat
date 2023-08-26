@@ -24,7 +24,7 @@
 {% for a in page_obj %}
 <div class="container center">
      <strong>Автор:  {{a.author}}</strong>
-    {%if a.photo %}
+    {%if a.photo and a.photo!="Null %}
 <img src="{{ a.photo.url }}", class="rounded" width="100%", height="70%"" >
     {%endif%}
    <h2> {{ a.text }} </h2>
