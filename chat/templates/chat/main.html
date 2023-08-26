@@ -14,16 +14,23 @@
 <body>
 
 {% if user.is_superuser%}
+<div class="header container">
+<a href="#" class="save btn btn-secondary log">Фоточки</a>
 <a href="{% url 'logout' %}" class="save btn btn-secondary log">Вийти</a>
+    </div>
 <br>
 <br>
 
 {% for a in page_obj %}
 <div class="container center">
      <strong>Автор:  {{a.author}}</strong>
+    {%if a.photo %}
+<img src="{{ a.photo.url }}", class="rounded" width="100%", height="70%"" >
+    {%endif%}
    <h2> {{ a.text }} </h2>
 
     <h6>Дата:  {{a.created_date}}</h6>
+
 </div>
 
 
@@ -34,8 +41,9 @@
 <br>
 <div class="container center">
 <h2>Нове повідомлення</h2>
-    <form action ="{%url 'leave_message' %}" method="POST" class="post-form">{% csrf_token %}
-        <textarea  required placeholder="Text", name="text"></textarea><br>
+    <form action ="{%url 'leave_message' %}" method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+        <textarea  placeholder="Text", name="text"></textarea><br>
+        <input type="file", name="images">
         <button type="submit" class="save btn btn-secondary">Відправити</button>
     </form>
 <br>
