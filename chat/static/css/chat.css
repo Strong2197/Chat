@@ -7,16 +7,16 @@ body {
 }
 .message {
     border: 2px dotted;
-    margin: 10px auto 10px auto;
+    margin: 10px 5vw 10px 5vw;
 }
 textarea {
         width: 90vw;
         height: 20vh;
       }
 .log{
-width: 20vw;
-        height: 5vh;
-        margin-left: 70vw;
+width: 25vw;
+        height: 8vh;
+        margin-left: 65vw;
         margin-top: 2vw;
 
 }
