@@ -25,6 +25,8 @@ def main(request):
     return render(request, 'chat/main.html', {'page_obj': page_obj})
 def leave_message(request):
     messages = Message.objects.order_by('-created_date')
+    if request.FILES['images']:
+        messages.create(text=request.POST['text'], author=request.user)
     messages.create(text = request.POST['text'], author = request.user, photo=request.FILES['images'])
 
     return HttpResponseRedirect(reverse('main'))
