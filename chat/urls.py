@@ -3,6 +3,7 @@ from . import views
 
 
 
+
 urlpatterns = [
     path('', views.main, name='main'),
     path('leave_message/', views.leave_message, name='leave_message'),
