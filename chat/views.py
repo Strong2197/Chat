@@ -48,7 +48,7 @@ def user_login(request):
     else:
         form = LoginForm()
     return render(request, 'chat/login.html', {'form': form})
-#def pages(request,):
+def photos(request,):
+    messages = Message.objects.order_by('-created_date')
 
-    #messages = Message.objects.order_by('-created_date')[(pages-1)*10:]
-    #return render(request, 'chat/main.html', {'messages': messages})
+    return render(request, 'chat/photos.html', {'messages': messages})

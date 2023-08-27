@@ -3,7 +3,10 @@ h2 {
 }
 body {
 
-    background-color: lightgrey;
+    background: radial-gradient(circle, rgba(241,241,241,1) 0%, rgba(140,140,140,1) 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 textarea {
