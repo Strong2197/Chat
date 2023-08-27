@@ -55,11 +55,11 @@
      {%if a.photo %}
     <tr>
         <td><h2>{{ a.author }}</h2></td>
-        <td><h2>{{a.created_date}}</h2></td>
+        <td><h2>{{a.created_date}} </h2></td>
         <td>  <a
          data-fancybox="gallery"
          data-src="{{ a.photo.url }}"
-         data-caption="{{a.author}}"
+         data-caption="'{{ a.text }}'"
          >
         <img src="{{ a.photo.url }}" , class="rounded", width="100%", height="100%" />
       </a></td>
